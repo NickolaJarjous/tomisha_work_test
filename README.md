@@ -78,9 +78,11 @@ flutter build apk --release
 
 ### Start and Endtime
 
-Start: 2026-01-03 at 18:00 CET\n
-End: 2026-01-05 at 23:00 CET\n
-Total Active Time: 6 hours\n
+Start: 2026-01-03 at 18:00 CET
+
+End: 2026-01-05 at 23:00 CET
+
+Total Active Time: 6 hours
 
 ### Notes
 
