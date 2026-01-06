@@ -2,35 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tomisha_work_test/configs/colors.dart';
 import 'package:tomisha_work_test/configs/dimens.dart';
 import 'package:tomisha_work_test/configs/svg_assets.dart';
 import 'package:tomisha_work_test/ui/widgets/slide_2_shapes.dart';
 import 'package:tomisha_work_test/ui/widgets/static/app_label.dart';
 import 'package:tomisha_work_test/utils/ext.dart';
+import 'package:widget_arrows/arrows.dart';
+import 'package:widget_arrows/widget_arrows.dart';
 
 class HomeTab2 extends GetResponsiveView {
   HomeTab2({super.key});
 
   @override
   Widget desktop() {
-    return Column(
-      children: [
-        SizedBox(
-          width: Dimens.width(490),
-          child: AppLabel(
-            text: 'Drei einfache Schritte zu deinem neuen Mitarbeiter',
-            fontSize: Dimens.font(38),
-            fontWeight: FontWeight.w500,
-            textAlign: TextAlign.center,
+    return ArrowContainer(
+      child: Column(
+        children: [
+          SizedBox(
+            width: Dimens.width(490),
+            child: AppLabel(
+              text: 'Drei einfache Schritte zu deinem neuen Mitarbeiter',
+              fontSize: Dimens.font(38),
+              fontWeight: FontWeight.w500,
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        90.ph,
-        _Slide1(),
-        Dimens.height(200).ph,
-        _Slide2(),
-        Dimens.height(200).ph,
-        _Slide3(),
-      ],
+          90.ph,
+          _Slide1(),
+          Dimens.height(200).ph,
+          _Slide2(),
+          Dimens.height(200).ph,
+          _Slide3(),
+        ],
+      ),
     );
   }
 
@@ -77,23 +82,33 @@ class _Slide1 extends GetResponsiveView {
                 ),
               ),
             ),
-            RichText(
-              text: TextSpan(
-                text: '1.',
-                style: GoogleFonts.lato(
-                  fontSize: Dimens.font(120),
-                  color: Color(0xFF718096),
-                ),
-                children: [
-                  WidgetSpan(child: Dimens.width(23).pw),
-                  TextSpan(
-                    text: 'Erstellen dein Unternehmensprofil',
-                    style: GoogleFonts.lato(
-                      fontSize: Dimens.font(28),
-                      color: Color(0xFF718096),
-                    ),
+            ArrowElement(
+              id: '1',
+              targetId: '2',
+              sourceAnchor: AlignmentGeometry.bottomLeft,
+              color: AppColors.secondaryText,
+              width: 1,
+              bow: -0.2,
+              padStart: 100,
+              arcDirection: ArcDirection.Left,
+              child: RichText(
+                text: TextSpan(
+                  text: '1.',
+                  style: GoogleFonts.lato(
+                    fontSize: Dimens.font(120),
+                    color: Color(0xFF718096),
                   ),
-                ],
+                  children: [
+                    WidgetSpan(child: Dimens.width(23).pw),
+                    TextSpan(
+                      text: 'Erstellen dein Unternehmensprofil',
+                      style: GoogleFonts.lato(
+                        fontSize: Dimens.font(28),
+                        color: Color(0xFF718096),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -161,23 +176,33 @@ class _Slide2 extends GetResponsiveView {
                 width: Dimens.width(324.3),
               ),
               Dimens.width(122.5).pw,
-              RichText(
-                text: TextSpan(
-                  text: '2.',
-                  style: GoogleFonts.lato(
-                    fontSize: Dimens.font(120),
-                    color: Color(0xFF718096),
-                  ),
-                  children: [
-                    WidgetSpan(child: Dimens.width(23).pw),
-                    TextSpan(
-                      text: 'Erstellen ein Jobinserat',
-                      style: GoogleFonts.lato(
-                        fontSize: Dimens.font(28),
-                        color: Color(0xFF718096),
-                      ),
+              ArrowElement(
+                id: '2',
+                targetId: '3',
+                sourceAnchor: AlignmentGeometry.bottomCenter,
+                color: AppColors.secondaryText,
+                width: 1,
+                bow: -0.2,
+                padEnd: 100,
+                arcDirection: ArcDirection.Left,
+                child: RichText(
+                  text: TextSpan(
+                    text: '2.',
+                    style: GoogleFonts.lato(
+                      fontSize: Dimens.font(120),
+                      color: Color(0xFF718096),
                     ),
-                  ],
+                    children: [
+                      WidgetSpan(child: Dimens.width(23).pw),
+                      TextSpan(
+                        text: 'Erstellen ein Jobinserat',
+                        style: GoogleFonts.lato(
+                          fontSize: Dimens.font(28),
+                          color: Color(0xFF718096),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -253,26 +278,29 @@ class _Slide3 extends GetResponsiveView {
                 ),
               ),
             ),
-            RichText(
-              text: TextSpan(
-                text: '3.',
-                style: GoogleFonts.lato(
-                  fontSize: Dimens.font(120),
-                  color: Color(0xFF718096),
-                ),
-                children: [
-                  WidgetSpan(child: Dimens.width(23).pw),
-                  WidgetSpan(
-                    child: SizedBox(
-                      width: Dimens.width(275),
-                      child: AppLabel(
-                        text: 'Wähle deinen neuen Mitarbeiter aus',
-                        fontSize: Dimens.font(28),
-                        color: Color(0xFF718096),
+            ArrowElement(
+              id: '3',
+              child: RichText(
+                text: TextSpan(
+                  text: '3.',
+                  style: GoogleFonts.lato(
+                    fontSize: Dimens.font(120),
+                    color: Color(0xFF718096),
+                  ),
+                  children: [
+                    WidgetSpan(child: Dimens.width(23).pw),
+                    WidgetSpan(
+                      child: SizedBox(
+                        width: Dimens.width(275),
+                        child: AppLabel(
+                          text: 'Wähle deinen neuen Mitarbeiter aus',
+                          fontSize: Dimens.font(28),
+                          color: Color(0xFF718096),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

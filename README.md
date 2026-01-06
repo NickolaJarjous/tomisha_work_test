@@ -88,6 +88,8 @@ Total Active Time: 6 hours
 
 The custom painter and animation took some time to implement.
 
+I know the arrow need more work but I would have had to fork the library and adjust it's code which would take longer timer.
+
 ### What would I improve with more time
 
 I would add work on to make the design pixel perfect in regards to sizing.
